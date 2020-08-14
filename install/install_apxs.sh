@@ -222,15 +222,15 @@ echo "${MODPAGESPEED_CONFDIR}/${MODPAGESPEED_CONF_NAME} (${MODPAGESPEED_FILE_USE
 echo "${MODPAGESPEED_CONFDIR}/${LIBRARIES_CONF_NAME} (${MODPAGESPEED_FILE_USER}:${MODPAGESPEED_FILE_GROUP})"
 echo "${MOD_PAGESPEED_CACHE} (${APACHE_USER}:${APACHE_GROUP})"
 echo ""
-if [ -z "${NO_PROMPT}" ]; then
-  echo -n "Continue? (y/N) "
-  read -n1 PROMPT
-  echo ""
-  if [ "${PROMPT}" != "y" -a "${PROMPT}" != "Y" ]; then
-    echo "Not continuing."
-    exit 1
-  fi
-fi
+# if [ -z "${NO_PROMPT}" ]; then
+#  echo -n "Continue? (y/N) "
+#  read -n1 PROMPT
+#  echo ""
+#  if [ "${PROMPT}" != "y" -a "${PROMPT}" != "Y" ]; then
+#    echo "Not continuing."
+#    exit 1
+#  fi
+# fi
 
 if [ -d "${MOD_PAGESPEED_CACHE}" ]; then
   echo "${MOD_PAGESPEED_CACHE} already exists. Not creating."
